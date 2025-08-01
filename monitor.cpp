@@ -16,7 +16,7 @@ void DisplayAlert (std::string& message){
 int IsTempOk(float temperature)
   {
      if (temperature > 102 || temperature < 95) {
-     DisplayAlert(""Temperature is critical!\n");
+     DisplayAlert("Temperature is critical!\n");
     return 0;
      }
     return 1;
