@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 using std::cout, std::flush, std::this_thread::sleep_for, std::chrono::seconds;
-void DisplayAlert (std::string message){
+void DisplayAlert (std::string& message){
     cout << message;
     for (int i = 0; i < 6; i++) {
       cout << "\r* " << flush;
@@ -21,7 +21,6 @@ int IsTempOk(float temperature)
      }
     return 1;
   }
-
 int IsPulseOk(float pulseRate)
   {
     if (pulseRate < 60 || pulseRate > 100) {
